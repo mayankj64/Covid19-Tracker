@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Covid-19 | India | Citywise Result</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- top -->
+                    <!-- header -->
+         <header class="header-area">
+           
+            <div class="container">
+               <div class="row d_flex">
+                  <div class="col-sm-3 logo_sm">
+                     <div class="logo">
+                        <a href="index.html"></a>
+                     </div>
+                  </div>
+                  <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a  href="index.html">Home</a></li>
+                              <li><a href="state.html">StateWise</a></li>
+                              <li><a class="active" href="city.html">CityWise</a></li>
+                              <li><a href="index.html" class="logo_midle">covid - 19</a></li>
+                              <li><a href="prevention.html">Prevention</a></li>
+                              <li><a href="faq.html">FAQ's</a></li>
+                              <li><a href="about.html">About</a></li>
+                           </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+      <!-- end header -->
+
+<!-- City code    -->
+    
+<br><br><br>
+      <hr>
+      <h2 style="padding-top: 5px; text-align: center;"><b>Select State and Get you State Covid - 19 Data.</b></h2>
+      <hr><center>
+        <p style="padding-bottom: 100px;font-size: 0px;"></p>
+      <section class="searchs">
+      <!--  <form> -->
+            <h3 style=""><b>SELECT STATE</b></h3>
+         <select id="foodList" style="width: 30%;height: 40px;background-color:whitesmoke;border-radius: 20px;text-align-last: center;-webkit-appearance: none;">
+            <option align="center" ><p style=""></p>Select State</option>
+            <option value="1">Andaman and Nicobar</option>
+            <option value="2">Andhra Pradesh</option>
+            <option value="3">Arunachal pradesh</option>
+            <option value="4">Assam</option>
+            <option value="5">Bihar</option>
+            <option value="6">Chandigrah</option>
+            <option value="7">Chhattisgrah</option>
+            <option value="8">Delhi</option>
+            <option value="9">Dadra and Nargar Haveli and Daman and Diu</option>
+            <option value="10">Goa</option>
+            <option value="11">Gujrat</option>
+            <option value="12">Himachal Pradesh</option>
+            <option value="13">Haryana</option>
+            <option value="14">Jharkhand</option>
+            <option value="15">Jammu and Kashmir</option>
+            <option value="16">karnatak</option>
+            <option value="17">kerala</option>
+            <option value="18">Ladakh</option>
+            <option value="19">Lakshadeep</option>
+            <option value="20">Maharashtra</option>
+            <option value="21">Meghalaya</option>
+            <option value="22">Mnipur</option>
+            <option value="23">Madhya Pradesh</option>
+            <option value="24">Mizoram</option>
+            <option value="25">Nagaland</option>
+            <option value="26">Odisha</option>
+            <option value="27">Punjab</option>
+            <option value="28">Puducherry</option>
+            <option value="29">Rajasthan</option>
+            <option value="30">Sikkim</option>
+            <option value="31">Talangana</option>
+            <option value="32">Tamil Nadu</option>
+            <option value="33">Tripura</option>
+            <option value="34">Utter Pradesh</option>
+            <option value="35">Uttrakhand</option>
+            <option value="36">West Bengal</option>
+         </select>
+         <br ><br><br>
+          <p style="padding-top: 0px;font-size: 0px;">.</p>
+         <a href="getCityData.html"><button id="addFood" style="width: 15%; height: 25px; border-radius: 20px;padding-top: 5px;padding-bottom: 30px;background: red;color: white;">Get Data</button></a>
+         <br><br><br><br>
+        <h1 class="foodValue"></h1>
+         <!-- </form> -->
+
+         <h1 class="stateValue"></h1>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#addFood").click(function(){
+      if(parseInt($("#foodList option:selected").val())==1){
+        alert("Please Select Any Food")
+      }else{
+      localStorage.setItem('foodItem',$("#foodList option:selected").val());
+      }
+    })
+
+  </script>
+
+
+
+      </section></center>
+      <br>
+
+<!--  City Code End   -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Resources</h3>
+                              <ul class="menu_footer">
+                                 <li><a href="www.covid19india.org">Data</a><li>
+                                 <li><a href="www.html.design.com">Template</a><li>
+                              </ul> 
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                             <h3>About</h3>
+                              <p>My Name is Mayank Jain from Neemuch India. This website is for Covid 19 Tracker</p>
+                           </div>
+                        </div>
+                     
+                
+                       
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3  text_align_left">
+                              <h3>Contact  Us</h3>
+                                <ul class="top_infomation">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           Neemuch [ Madhya Pradesh]  
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                           Call : +91 7999712158
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                           <a href="Javascript:void(0)">Email : mayank0703@gmail.com</a>
+                        </li>
+                     </ul>
+                            
+                           
+                     </div>
+                  </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>India</h3>
+                              <div class="map">
+                                <img src="images/map1.jpeg" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                    
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free MJ Technologies</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

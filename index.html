@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Covid-19 | India</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!-- Style tag for india Cases  -->
+      <style>
+.heading{
+
+  font-size: 30px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background: red;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.6) ; 
+  text-shadow: 0px 8px 10px rgba(0,0,0,0.5) ;
+  animation: india 2s alternate infinite;
+}
+@keyframes india{
+  0%{background: green;}
+  40%{background: red;}
+  60%{background: red;}
+  80%{background: blue;}
+  100%{background: blue;}
+}
+
+.card {
+    width: 84%;
+    background: #ccc;
+    padding: 8%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+.card.a {
+    background: #41a7ff;
+    padding-left: 20px;
+}
+.card.cr {
+    background: #ff3434;
+}
+.card.r {
+    background: #32b336;
+}
+.card.ca {
+    background: #d83f3f;
+}
+.card.d {
+    background: #ff0053;
+}
+.card.t {
+    background: #ffa501;
+}
+.card h5 {
+    margin: 0;
+    font-size: 1rem;
+}
+.card span {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.card i {
+    font-size: 3rem;
+}
+.board {
+    column-count: 3;
+    column-gap: 1rem;
+}
+@media screen and (max-width: 768px){
+  .board {
+    column-count: 2;
+  }
+  .card span {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .board {
+    column-count: 1;
+  }
+}
+    </style>
+      <!-- End of style tag India Case -->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <!-- <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div> -->
+      <!-- end loader -->
+      <!-- top -->
+                    <!-- header -->
+         <header class="header-area">
+           
+            <div class="container">
+               <div class="row d_flex">
+                  <div class="col-sm-3 logo_sm">
+                     <div class="logo">
+                        <a href="index.html"></a>
+                     </div>
+                  </div>
+                  <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a class="active" href="index.html">Home</a></li>
+                              <li><a href="state.html">StateWise</a></li>
+                              <li><a href="city.html">CityWise</a></li>
+                              <li><a href="index.html" class="logo_midle">covid - 19</a></li>
+                              <li><a href="prevention.html">Prevention</a></li>
+                              <li><a href="faq.html">FAQ's</a></li>
+                              <li><a href="about.html">About</a></li>
+                           </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+      <!-- end header -->	
+      <!-- header inner -->
+      <br><br><br>
+      <!-- India Cases Box -->
+            <h2 class="heading">INDIA COVID - 19 CASES</h2>
+      <span id="country" style="font-size: 0px;"></span> <!-- <img src="" id="flag"> -->
+      <div class="board">
+        <div class="card a" style="left: 48px;"><i class="fa fa-tachometer"></i><h5>Active Cases</h5><span id="active"></span></div>
+        <div class="card ca" style="left: 48px;"><i class="fa fa-th-list"></i><h5>Total Cases</h5><span id="cases"></span></div>
+        <div class="card cr" style="left: 28px;"><i class="fa fa-times-circle"></i><h5>Critical Cases</h5><span id="critical"></span></div>
+        <div class="card d" style="left: 28px;"><i class="fa fa-times"></i><h5>Total Deaths</h5><span id="death"></span></div>
+        <div class="card r"><i class="fa fa-check-square-o"></i><h5>Recovered Cases</h5><span id="recovered"></span></div>
+        <div class="card t"><i class="fa fa-eye"></i><h5>Total Testes Done</h5><span id="tests"></span>
+        </div>
+      </div>
+      <hr><br>
+
+      <a href="index.html" style="color:white;text-decoration:none;"><h2><p style="text-align:center;border-radius: 5px;box-shadow: 0px 8px 16px rgba(0,0,0,0.6) ;text-shadow: 0px 8px 10px rgba(0,0,0,0.5) ;width:40%;height:40px;margin-left:auto;margin-right:auto;background-color:red;padding-top:10px;"><b>REFRESH</b></p></h2></a><br><br>
+      <!-- end of india cases -->     
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Resources</h3>
+                              <ul class="menu_footer">
+                                 <li><a href="www.covid19india.org">Data</a><li>
+                                 <li><a href="www.html.design.com">Template</a><li>
+                              </ul> 
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                             <h3>About</h3>
+                              <p>My Name is Mayank Jain from Neemuch India. This website is for Covid 19 Tracker</p>
+                           </div>
+                        </div>
+                     
+                
+                       
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="hedingh3  text_align_left">
+                              <h3>Contact  Us</h3>
+                                <ul class="top_infomation">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           Neemuch [ Madhya Pradesh]  
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                           Call : +91 7999712158
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                           <a href="Javascript:void(0)">Email : mayankj0703@gmail.com</a>
+                        </li>
+                     </ul>
+                            
+                           
+                     </div>
+                  </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>India</h3>
+                              <div class="map">
+                                <img src="images/map1.jpeg" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                    
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free MJ Technologies</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
+
+<script type="text/javascript">
+
+fetch('https://corona.lmao.ninja/v2/countries/India')
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  console.log(data);
+  document.getElementById("country").innerHTML = data.country;
+  document.getElementById("active").innerHTML = data.active.toLocaleString();
+  document.getElementById("cases").innerHTML = data.cases.toLocaleString();
+  document.getElementById("critical").innerHTML = data.critical.toLocaleString();
+  document.getElementById("death").innerHTML = data.deaths.toLocaleString();
+  document.getElementById("recovered").innerHTML = data.recovered.toLocaleString();
+  document.getElementById("tests").innerHTML = data.tests.toLocaleString();
+});
+</script> 

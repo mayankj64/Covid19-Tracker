@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CityWise</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<body>
+
+<!--     <h1 id="foodHeader">Running</h1>
+ -->
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+//getting value of state
+
+
+  $(document).ready(function(){
+      var foodItem = localStorage.getItem('foodItem')
+      $("#foodHeader").html(foodItem)
+      console.log(foodItem)
+    
+
+// var ab = sessionStorage.getItem("State");
+//end
+	
+ 	fetch('https://api.covid19india.org/v2/state_district_wise.json')
+  .then((responce) => responce.json())
+  .then((result) =>{
+  	console.log(result);
+           const corona = result[foodItem].districtData;
+     // console.log(result.statecode.MP);
+     	console.log(corona);
+
+  
+    document.write('<h2><p style="text-align:center;border-radius: 10px;box-shadow: 0px 8px 16px rgba(0,0,0,0.6) ;text-shadow: 0px 8px 10px rgba(0,0,0,0.5) ;width:50%;margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;"><b>Corona Virus Cases CityWise</b></p></h2>');
+
+    document.write('<p style="color:white;">ch iauiueu<a href="city.html"><button style="width:100px;padding:9px;padding">BACK</button></a>s<a href="getCityData.html"><button style="width:100px;padding:9px;">REFRESH</button></a></p>');
+
+    document.write('<table border="2" style="font-size:20px;border-collapse: collapse;padding: 8px;width:90%;background:whitesmoke;margin-left:auto;margin-right:auto;">');
+    document.write('<tr>');
+    document.write('<td>');
+    document.write('<b><font size="4">City</b>');
+    document.write('</td>');
+    document.write('<td>');
+    document.write('<b><font size="4">ACTIVE CASES</b>');
+    document.write('</td>');
+    document.write('<td>');
+    document.write('<b><font size="4">CONFIRMED CASES</b>');
+    document.write('</td>');
+    document.write('<td>');
+    document.write('<b><font size="4">DEATHS</b>');
+    document.write('</td>');
+    document.write('<td>');
+    document.write('<b><font size="4">RECOVERED</b>');
+    document.write('</td>');
+    document.write('</tr>');
+
+    // Data Fechting
+    for(var i=0;i<52;i++){
+    document.write('<tr>');
+    document.write('<td>');
+    document.write(corona[i]['district']);
+    document.write('</td>');
+    document.write('<td>');
+    document.write(corona[i]['active']);
+    document.write('</td>');
+    document.write('<td>');
+    document.write(corona[i]['confirmed']);
+    document.write('</td>');
+    document.write('<td>');
+    document.write(corona[i]['deceased']);
+    document.write('</td>');
+    document.write('<td>');
+    document.write(corona[i]['recovered']);
+    document.write('</td>');
+    document.write('</tr>');
+    
+}
+document.write('</table>')
+   document.write('<br>');
+  document.write('<hr>');
+  document.write('<br>');
+  
+
+  
+});
+
+  });
+</script>
